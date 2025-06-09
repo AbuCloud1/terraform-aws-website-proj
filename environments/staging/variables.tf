@@ -75,8 +75,8 @@ variable "key_name" {
 }
 
 variable "user_data" {
-    description = "User data script to bootstrap EC2"
-    type = string
-    default = ""
+  description = "User data script to bootstrap EC2"
+  type        = string
+  default     = ""
 }
 
