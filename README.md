@@ -15,8 +15,12 @@ Key features include:
 * **CI/CD Pipelines with GitHub - Actions**, automating validation, planning, and application of Terraform changes whenever code is pushed.
 
 ---
+## Project Infrastructure Diagram
 
-## Project Structure
+![aws-proj drawio](https://github.com/user-attachments/assets/2d7da1cd-1c07-4132-a41a-f99acabfaa3b)
+
+---
+## Project Folder Structure
 
 ```bash
 .
@@ -37,7 +41,7 @@ Key features include:
 │       └── terraform-prod.yml
 └── terraform.tfstate
 ```
-
+---
 ### Environments (dev, staging, prod)
 
 Each environment has its own configuration, isolated in its own folder:
