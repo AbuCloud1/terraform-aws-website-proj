@@ -140,9 +140,6 @@ Here are some improvements that are potentially going to be implemented for the 
   * ALB health checks pass
   * VPC/subnets are correctly provisioned
 
-* **Bastion Host Setup**
-  Replace direct SSH access with a secure, public-facing bastion host that routes into private subnets. Improves auditability and reduces attack surface.
-
 * **CloudWatch Metrics and Alerts**
   Enhance observability by adding:
 
