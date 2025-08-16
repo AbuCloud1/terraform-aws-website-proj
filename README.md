@@ -41,17 +41,6 @@ Key features include:
 │       └── terraform-prod.yml
 └── terraform.tfstate
 ```
----
-### Environments (dev, staging, prod)
-
-Each environment has its own configuration, isolated in its own folder:
-
-* `main.tf`: Instantiates modules and ties them together, such as connecting subnets to route tables, attaching instances to target groups, etc.
-* `terraform.tfvars`: Stores input variables that are used to configure settings like instance type, number of instances, or region specific to each environment.
-* `variables.tf`: Defines and documents expected inputs for better clarity and reusability.
-* `versions.tf`: Locks in specific Terraform and AWS provider versions to ensure consistency across machines and pipelines.
-* `master-key.pem`: Key pair used for SSH access into EC2 instances, placed temporarily during initial development.
-
 
 ---
 
@@ -105,13 +94,6 @@ CI/CD pipelines are defined under `.github/workflows/` and are environment-speci
 
 * **Terraform Apply**
   Applies infrastructure changes automatically using `-auto-approve` (great for dev/staging, consider manual apply for prod).
-
-### Trigger Logic:
-
-* **Dev Workflow**: Auto-runs on any push to `dev` branch.
-* **Staging Workflow**: Auto-runs on any push to `staging` branch.
-* **Production Workflow**: Auto-runs on any push to `main` branch.
-* **Manual Trigger**: Optional `workflow_dispatch` allows you to manually trigger plans or applies from GitHub UI — useful for controlled deployments.
 
 ---
 
